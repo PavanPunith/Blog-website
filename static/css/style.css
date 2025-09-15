@@ -1,112 +1,186 @@
+/* ================================
+   Reset & Base
+================================ */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    min-height: 100vh;
-    background-color: black;
-    color: whitesmoke;
-    font-size: 3rem;
+  min-height: 100vh;
+  background-color: #121212;  /* Modern dark background */
+  color: #eaeaea;             /* Light grey text */
+  font-size: 1.125rem;        /* ~18px */
+  font-family: "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
 }
 
+/* ================================
+   Navigation Bar
+================================ */
 nav {
-    padding: 1rem;
-    background-color: #44B78B;
-    color: white;
-    font-size: 2.5rem;
+  padding: 1rem 2rem;
+  background-color: #2f9e6d;  /* Dark green */
+  color: white;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #b2f5ea; /* Aqua hover */
+}
+
+/* ================================
+   Main Layout
+================================ */
 main {
-    padding: 1rem;
+  padding: 2rem;
 }
 
 section {
-    display: flex;
-    flex-flow: column;
-    gap: 1rem;
+  display: flex;
+  flex-flow: column;
+  gap: 1.5rem;
 }
 
+/* ================================
+   Typography
+================================ */
 h1,
 h2 {
-    font-size: 2.5rem;
+  font-size: 2rem;
+  color: #81dbb8; /* Accent green */
 }
 
 p {
-    font-size: 1rem;
+  font-size: 1.125rem;
+  color: #cccccc;
 }
 
+/* Links */
 a {
-    text-decoration: none;
-    color: #81dbb8;
+  text-decoration: none;
+  color: #4fd1c5; /* Teal link */
+  font-weight: 500;
 }
 
 a:hover {
-    opacity: .85;
+  opacity: 0.9;
+  color: #38b2ac; /* Darker teal hover */
 }
 
+/* ================================
+   Banner
+================================ */
 .banner {
-    display: block;
-    width: 100%;
-    max-width: 800px;
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  margin: 1rem 0;
 }
 
+/* ================================
+   Forms
+================================ */
 .form-with-validation {
-    max-width: 600px;
-    font-size: 1rem;
-    padding: 1rem;
-    display: flex;
-    flex-flow: column;
-    gap: 1rem;
+  max-width: 600px;
+  background: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
 }
 
 .form-with-validation div {
-    display: flex;
-    flex-flow: column;
-    gap: 0.5rem;
+  display: flex;
+  flex-flow: column;
+  gap: 0.5rem;
 }
 
 .form-with-validation input {
-    padding: 0.25rem;
-    max-width: 300px;
+  padding: 0.5rem;
+  max-width: 300px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background: #2a2a2a;
+  color: #eaeaea;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.form-with-validation input:focus {
+  border-color: #4fd1c5;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(79, 209, 197, 0.3);
 }
 
 .form-submit {
-    padding: 0.5rem;
-    border-radius: 10px;
-    width: 125px;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #4fd1c5;
+  color: #121212;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
+.form-submit:hover {
+  background-color: #38b2ac;
+  transform: translateY(-2px);
+}
+
+/* ================================
+   Help Text & Errors
+================================ */
 .helptext {
-    font-size: 1rem;
-    margin-left: 1rem;
+  font-size: 0.9rem;
+  margin-left: 1rem;
+  color: #aaaaaa;
 }
 
 .helptext ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .errorlist {
-    color: #F00;
-    margin-left: 2rem;
+  color: #f87171; /* Softer red */
+  margin-left: 2rem;
 }
 
 .errorlist li::marker {
-    content: '🚨 ';
+  content: "🚨 ";
 }
 
-
+/* ================================
+   Logout Button
+================================ */
 .logout {
-    display: inline-block;
+  display: inline-block;
 }
 
 .logout-button {
-    font-size: 2.5rem;
-    background-color: rgb(0, 0, 0, 0);
-    border: none;
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: opacity 0.3s ease;
 }
 
 .logout-button:hover {
-    opacity: .85;
+  opacity: 0.75;
 }
